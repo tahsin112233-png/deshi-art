@@ -111,7 +111,7 @@ const API_PROVIDERS = [
     icon: "🤖",
     desc: "Best quality, auto-routes to top models",
     endpoint: "https://api.agentrouter.ai/v1/chat/completions",
-    model: "gpt-4o", // AgentRouter auto-routes but needs a model name
+    model: "gpt-4o",
     keyPlaceholder: "agentrouter_..."
   },
   { 
@@ -308,19 +308,7 @@ ${customDetails ? `\nDIRECTOR'S NOTES: ${customDetails}` : ""}
 Generate this EXACT JSON structure (be extremely detailed):
 
 {
-  "master_video_prompt": "400-500 word CINEMA-LEVEL prompt for AI video generation. Write this as if directing a professional film crew. Include:
-  
-  - ESTABLISHING SHOT: Ultra-specific camera position, lens choice (wide/medium/close), angle
-  - LIGHTING DESIGN: Exact light sources (sun angle, moon phase, kerosene lamp position), color temperature (warm/cool), shadow direction, ambient light quality
-  - ENVIRONMENT: Detailed 3D space description - every building, tree, object with exact placement, materials, weathering, colors
-  - CHARACTERS: If present - exact age, height, clothing (fabric type, colors, condition), hairstyle, skin tone, facial features, posture, hand gestures, emotional state shown through micro-expressions
-  - FOREGROUND/MIDGROUND/BACKGROUND: Distinct elements in each depth layer for cinematic composition
-  - ATMOSPHERIC EFFECTS: Dust, mist, smoke, rain, heat haze, insects, birds - whatever is seasonally/temporally accurate
-  - SOUND DESIGN CUES: What ambient sounds would be present (for reference, even though generating silent video)
-  - CAMERA MOVEMENT: Exact type (static, slow pan left/right, dolly in/out, crane up/down), speed, duration
-  - COLOR PALETTE: Specific hex codes or precise color descriptions for dominant tones
-  - TECHNICAL SPECS: 9:16 vertical, 4K, 24fps, smooth motion, stable frame, no glitches
-  - AI MODEL OPTIMIZATION: Include style trigger words for Wan2.1/Veo3/Kling (cinematic, high quality, detailed, smooth motion, etc.)",
+  "master_video_prompt": "400-500 word CINEMA-LEVEL prompt for AI video generation. Write this as if directing a professional film crew. Include: establishing shot details, lighting design with exact sources and temperatures, detailed 3D environment description, character details if present, foreground/midground/background elements, atmospheric effects, camera movement specifications, color palette with specific tones, technical specs (9:16, 4K, 24fps), and AI model optimization keywords.",
 
   "short_video_prompt": "60-80 word condensed version for quick generation. Maintains key visual elements and style but streamlined.",
 
@@ -363,44 +351,34 @@ Generate this EXACT JSON structure (be extremely detailed):
     }
   ],
 
-  "caption_bangla_viral": "Viral-optimized Bangla caption (4-5 sentences). MUST include:
-  - Powerful emotional hook in first sentence (nostalgia, longing, bittersweet memory)
-  - Specific sensory detail from the scene that triggers memory
-  - Universal relatable statement about the era
-  - Direct question to audience to boost comments
-  - 3-5 relevant emojis placed naturally
-  Use conversational Dhaka/Chittagong Bangla, not formal literary Bangla.",
+  "caption_bangla_viral": "Viral-optimized Bangla caption (4-5 sentences). Include powerful emotional hook, specific sensory detail, universal relatable statement, direct question to audience, and 3-5 relevant emojis. Use conversational Dhaka Bangla.",
 
   "caption_english_international": "English caption for diaspora/international audience (4-5 sentences). Explain cultural context briefly while maintaining emotional impact.",
 
   "cultural_authenticity_checklist": [
-    "List 8-10 SPECIFIC authentic details that MUST be visible in the video",
-    "Each item should be an exact object, clothing item, architectural element, or cultural practice from 1980s-90s rural Bangladesh",
-    "Include materials, colors, typical wear-and-tear, and placement"
+    "List 8-10 SPECIFIC authentic details that MUST be visible in the video. Each item should be an exact object, clothing item, architectural element, or cultural practice from 1980s-90s rural Bangladesh with materials, colors, and placement."
   ],
 
   "lighting_technical_notes": "Professional cinematographer-level lighting notes: exact sun/moon angle in degrees, Kelvin temperature of light sources, shadow softness, contrast ratio, how to achieve the mood through lighting alone",
 
-  "color_grading_preset": "Specific color grading instructions: which colors to boost, which to desaturate, LUT-style description (e.g., 'Fujifilm Superia 400 film stock emulation - warm shadows, slightly crushed blacks, golden highlights, +15 saturation in reds/oranges, -10 in blues')",
+  "color_grading_preset": "Specific color grading instructions: which colors to boost, which to desaturate, LUT-style description (e.g., 'Fujifilm Superia 400 film stock emulation')",
 
   "ai_model_optimization_tags": [
-    "List of 15-20 style trigger words/phrases that work best for AI video models",
-    "Include technical terms (cinematic, 4K, detailed), style terms (Ghibli, hand-drawn), quality terms (high detail, smooth motion), mood terms (nostalgic, peaceful)"
+    "List of 15-20 style trigger words/phrases that work best for AI video models. Include technical, style, quality, and mood terms."
   ],
 
-  "viral_psychology_analysis": "2-3 sentence analysis of WHY this specific scene/framing/moment will trigger emotional response and sharing behavior in Bangladesh audience. Reference specific cultural memories or collective experiences.",
+  "viral_psychology_analysis": "2-3 sentence analysis of WHY this specific scene/framing/moment will trigger emotional response and sharing behavior in Bangladesh audience.",
 
   "posting_strategy_2026": {
     "best_time_bd": "Exact time to post in Bangladesh timezone with reasoning",
     "caption_length": "Optimal character count for each platform",
-    "hashtag_strategy": "Which hashtags to use first (Instagram shows first 3-5 before 'more'), which are trending NOW in May 2026",
+    "hashtag_strategy": "Which hashtags to use first, which are trending NOW in May 2026",
     "engagement_tactics": "Specific call-to-action, comment baiting question, share trigger",
     "cross_platform_adaptation": "How to slightly modify for TikTok vs Reels vs Shorts"
   },
 
   "music_suggestions": [
-    "List 3-4 specific Bengali songs from 1980s-90s that would pair perfectly",
-    "Include artist name and why it emotionally matches"
+    "List 3-4 specific Bengali songs from 1980s-90s that would pair perfectly with artist names and why"
   ],
 
   "viral_score_prediction": "X.X/10 score with detailed breakdown of viral potential factors"
@@ -953,11 +931,11 @@ Generate this EXACT JSON structure (be extremely detailed):
                 <div style={{ color: "#f5c842", fontWeight: "600", marginBottom: "8px" }}>
                   {lang === "en" ? "Get API Keys:" : "API কী পান:"}
                 </div>
-                • AgentRouter: <a href="https://agentrouter.ai" target="_blank" style={{ color: "#00d4ff" }}>agentrouter.ai</a><br/>
-                • OpenRouter: <a href="https://openrouter.ai/keys" target="_blank" style={{ color: "#9333ea" }}>openrouter.ai/keys</a><br/>
-                • Gemini: <a href="https://aistudio.google.com/app/apikey" target="_blank" style={{ color: "#4285f4" }}>aistudio.google.com/app/apikey</a><br/>
-                • ChatGPT: <a href="https://platform.openai.com/api-keys" target="_blank" style={{ color: "#10a37f" }}>platform.openai.com/api-keys</a><br/>
-                • Claude: <a href="https://console.anthropic.com/settings/keys" target="_blank" style={{ color: "#f5c842" }}>console.anthropic.com/settings/keys</a>
+                • AgentRouter: <a href="https://agentrouter.ai" target="_blank" rel="noopener noreferrer" style={{ color: "#00d4ff" }}>agentrouter.ai</a><br/>
+                • OpenRouter: <a href="https://openrouter.ai/keys" target="_blank" rel="noopener noreferrer" style={{ color: "#9333ea" }}>openrouter.ai/keys</a><br/>
+                • Gemini: <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" style={{ color: "#4285f4" }}>aistudio.google.com/app/apikey</a><br/>
+                • ChatGPT: <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" style={{ color: "#10a37f" }}>platform.openai.com/api-keys</a><br/>
+                • Claude: <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer" style={{ color: "#f5c842" }}>console.anthropic.com/settings/keys</a>
               </div>
 
             </div>
@@ -1070,12 +1048,27 @@ Generate this EXACT JSON structure (be extremely detailed):
                           color: "#ccc",
                           border: "1px solid rgba(232,160,69,0.2)",
                         }}>
-                          <div style={{ color: "#e8a045", fontWeight: "700", marginBottom: "6px", display: "flex", justifyContent: "space-between" }}>
+                          <div style={{ 
+                            color: "#e8a045", 
+                            fontWeight: "700", 
+                            marginBottom: "6px", 
+                            display: "flex", 
+                            justifyContent: "space-between" 
+                          }}>
                             <span>{scene.timestamp}</span>
                             <span style={{ fontSize: "10px", opacity: 0.8 }}>{scene.shot_type}</span>
                           </div>
                           <div style={{ marginBottom: "6px", lineHeight: "1.6" }}>{scene.visual_action}</div>
-                          <div style={{ fontSize: "11px", opacity: 0.7", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px", marginTop: "6px", paddingTop: "6px", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+                          <div style={{ 
+                            fontSize: "11px", 
+                            opacity: 0.7, 
+                            display: "grid", 
+                            gridTemplateColumns: "1fr 1fr", 
+                            gap: "6px", 
+                            marginTop: "6px", 
+                            paddingTop: "6px", 
+                            borderTop: "1px solid rgba(255,255,255,0.1)" 
+                          }}>
                             <div>📹 {scene.camera_movement}</div>
                             <div>🎭 {scene.emotional_beat}</div>
                           </div>
